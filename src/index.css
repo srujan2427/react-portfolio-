@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 :root {
-    --primary: #330a5a;
+    --primary: #3b076c;
     --accent: #F18F01;
     --text: #2C3E50;
     --light: #F4F6F8;
@@ -38,7 +38,7 @@ body {
 }
 
 .container {
-    width: min(1200px, 100% - 40px);
+    width: calc(100% - 40px);
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
@@ -122,8 +122,8 @@ color: var(--primary);
 }
 /* 3. Dark Mode Global Overrides */
 body[data-theme="dark"] {
-    background: #12121200;
-    color: #f5f5f500;
+    background: #121212;
+    color: #f5f5f5;
 }
 /* Header */
 body[data-theme="dark"] .site-header,
@@ -161,6 +161,10 @@ body[data-theme="dark"] .highlight {
     color: #F18F01;
 }
 
+body[data-theme="dark"] p {
+    color: #f5f5f5;
+    opacity: 1;
+}
 
 /* Skills */
 body[data-theme="dark"] .skills-section {
@@ -192,9 +196,21 @@ body[data-theme="dark"] .skill-level { color: #F18F01; }
 
 /* Contact */
 body[data-theme="dark"] .contact-section {
-    background: #181818;
+    background: #00000000;
 }
 
+.contact-form{
+    width:100%;
+    max-width:650px;
+    margin:0 auto;
+    padding:0 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    box-sizing: border-box;
+}
 
 /* Form */
 body[data-theme="dark"] input,
@@ -224,8 +240,8 @@ body[data-theme="dark"] .btn-primary {
 
 
 body[data-theme="dark"] .btn-secondary {
-    border-color: #ffffff;
-    color: #ffffff;
+    border-color: #fff;
+    color: #fff;
 }
 
 
@@ -257,4 +273,10 @@ body[data-theme="dark"] .theme-toggle {
     background: #333333;
     color: #ffffff;
     border: 1px solid #666666;
+}
+
+html,
+body {
+    width: 100%;
+    overflow-x: hidden;
 }
